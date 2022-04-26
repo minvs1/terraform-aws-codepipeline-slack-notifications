@@ -11,8 +11,8 @@ locals {
   subscription_name = "${module.default_label.id}-pipeline-updates"
 }
 
+#tfsec:ignore:aws-sns-enable-topic-encryption
 resource "aws_sns_topic" "pipeline_updates" {
-  # tfsec:ignore:AWS016
   name = local.subscription_name
   tags = module.default_label.tags
 }
@@ -69,6 +69,7 @@ data "archive_file" "notifier_package" {
   output_path = "${path.module}/lambdas/notifier.zip"
 }
 
+#tfsec:ignore:aws-lambda-enable-tracing
 resource "aws_lambda_function" "pipeline_notification" {
   filename         = "${path.module}/lambdas/notifier.zip"
   function_name    = module.default_label.id

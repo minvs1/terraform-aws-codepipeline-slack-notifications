@@ -71,6 +71,7 @@ data "archive_file" "notifier_package" {
 }
 
 resource "aws_lambda_function" "pipeline_notification" {
+  #tfsec:ignore:aws-lambda-enable-tracing
   filename         = "${path.module}/lambdas/notifier.zip"
   function_name    = module.default_label.id
   role             = aws_iam_role.pipeline_notification.arn

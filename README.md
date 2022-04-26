@@ -63,8 +63,17 @@ should be good to go.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_archive"></a> [archive](#provider\_archive) | >= 1.3 |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.70, < 5.0 |
+| <a name="provider_archive"></a> [archive](#provider\_archive) | 2.2.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.11.0 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [archive_file.notifier_package](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
+| [aws_iam_policy_document.pipeline_notification](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.pipeline_notification_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.pipeline_updates_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs
 
